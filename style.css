@@ -1,8 +1,9 @@
 *{
     margin: 0;
-    font-family: airal;
-    border: border-box;
+    font-family: Arial;   
+    box-sizing: border-box; 
 }
+
 
 .navbar{
     height: 100px;
@@ -166,4 +167,29 @@ footer{
     text-align: end;
     padding: 15px;
     font-size: 16px;
+}
+@media (max-width: 600px){
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    section{
+        padding: 30px 15px;
+    }
+
+    .lab-cards,
+    .faculty-cards,
+    .subjects{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px){
+    .lab-cards,
+    .faculty-cards,
+    .subjects{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
